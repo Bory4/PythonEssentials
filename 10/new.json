@@ -1,0 +1,16 @@
+{
+    "produkty": [
+        {
+            "nazwa": "Krzesło",
+            "cena": 100
+        },
+        {
+            "nazwa": "Stół",
+            "cena": 200
+        },
+        {
+            "nazwa": "Szafa",
+            "cena": 300
+        }
+    ]
+}
