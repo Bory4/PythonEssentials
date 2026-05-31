@@ -2,7 +2,7 @@ from cryptography.hazmat.primitives.asymmetric import ed25519
 from cryptography.hazmat.primitives import serialization
 from sys import argv
 
-
+# Generating pair of keys
 private_key = ed25519.Ed25519PrivateKey.generate()
 public_key = private_key.public_key()
 
@@ -11,6 +11,7 @@ public_bytes = public_key.public_bytes(
     format=serialization.PublicFormat.Raw
 )
 
+# Checking input parameters
 if len(argv) != 2:
     print(f"Usage: python {argv[0]} <path_to_file>")
     exit(1)

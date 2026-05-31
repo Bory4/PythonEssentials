@@ -1,7 +1,7 @@
 from Crypto.Cipher import AES
 from sys import argv
 
-key = b'Skryptowanie jest super!'# In this MODE, key have to be 16 bytes long
+key = b'Skryptowanie jest super!' # In this MODE, key have to be 24 bytes long
 
 with open(f"{argv[1]}.enc", 'rb') as data:
     ciphertext = data.read()
@@ -17,7 +17,7 @@ plaintext = cipher.decrypt(ciphertext)
 
 try:
     cipher.verify(tag)
-    with open(f"{argv[1]}.dec", "wb") as file:
+    with open(f"decrypted_{argv[1]}", "wb") as file:
         file.write(plaintext)
 except ValueError:
     print("Key incorrect or message corrupted")

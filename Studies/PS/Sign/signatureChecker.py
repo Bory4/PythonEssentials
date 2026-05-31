@@ -1,7 +1,9 @@
 from cryptography.hazmat.primitives.asymmetric import ed25519
 from sys import argv
 
-# Reading files as bytes
+## Reading files as bytes
+
+# File to check
 with open(argv[1], "rb") as f:
     file_data = f.read()
 
@@ -9,10 +11,9 @@ with open(argv[1], "rb") as f:
 with open(f"{argv[1]}.sig", "rb") as f:
     signature = f.read()
 
-# Public key in hex
+# Public key 
 with open(f"{argv[1]}.pub", "rb") as f:
     public_key = f.read()
-
 
 # Verification
 try:
